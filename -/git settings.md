@@ -1,5 +1,6 @@
 #git 
-
+```table-of-contents
+```
 ## Перезапись последних двуx коммитов
 ``` shell
 git reset --soft HEAD~2  

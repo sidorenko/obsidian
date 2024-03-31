@@ -15,7 +15,9 @@ list from #git
 
 [[git init]]
 [[git hooks]]
+[[git aliases]]
 [[git merge commits]]
+[[git generate ssh]]
 
 [[patch]]
 [[errors]]

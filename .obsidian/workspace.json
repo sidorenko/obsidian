@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "4a447d9cbd2bee98",
+        "id": "b61cdf3aa99a0d09",
         "type": "tabs",
         "children": [
           {
-            "id": "2781f2d23b9a4691",
+            "id": "aebd1c09c0366195",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "1 FILES/3 canvas/React Map.canvas",
-                "viewState": {
-                  "x": -2072.2680985858406,
-                  "y": 123.34241984159195,
-                  "zoom": -0.938045537855365
-                }
+                "file": "-/git settings.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           }
@@ -107,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 FILES/3 canvas/React Map.canvas"
+                "file": "-/git settings.md"
               }
             }
           },
@@ -150,10 +148,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2781f2d23b9a4691",
+  "active": "aebd1c09c0366195",
   "lastOpenFiles": [
-    "00 React MOC.md",
+    "00 Git MOC.md",
+    "-/git init.md",
+    "-/git hooks.md",
+    "-/git aliases.md",
+    "-/git generate ssh.md",
     "1 FILES/3 canvas/React Map.canvas",
+    "00 React MOC.md",
     "1 FILES/3 canvas/Angular2 Map.canvas",
     "1 FILES/3 canvas/Typescript Map.canvas",
     "-/Typescript Object Types.md",
@@ -179,10 +182,6 @@
     "-/Javascript Data types.md",
     "-/Javascript Intro.md",
     "-/Javscript Variables.md",
-    "-/types - NUB NOS.md",
-    "-/Typescript Type Compatibility.md",
-    "-/Typescript Interfaces.md",
-    "-/Typescript Introduction.md",
     "1 FILES/3 canvas/NodeJS MAP.canvas",
     "1 FILES/3 canvas/Git MAP.canvas",
     "1 FILES/3 canvas/Patterns and Principles.canvas",
