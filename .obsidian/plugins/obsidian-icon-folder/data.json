@@ -1,0 +1,36 @@
+{
+  "settings": {
+    "migrated": 4,
+    "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
+    "fontSize": 16,
+    "emojiStyle": "none",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "FasFolder-tree",
+      "SiReacthookform",
+      "FasDown-left-and-up-right-to-center",
+      "SiFirefoxbrowser",
+      "SiTypescript"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconIdentifier": ":",
+    "iconsInLinksEnabled": true
+  },
+  "Excalidraw": "RiQuill-pen-line",
+  "1 FILES": "RiFile-line",
+  "0 TEMPLATES": "RiFile-copy-2-line",
+  "-": "FasFolder-tree",
+  "links": "RiAt-line"
+}

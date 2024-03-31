@@ -1,0 +1,136 @@
+{
+  "main": {
+    "id": "ebf251cba7d4ef4c",
+    "type": "split",
+    "children": [
+      {
+        "id": "d363e2a5219f2e11",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f34de4069a99117c",
+    "type": "split",
+    "children": [
+      {
+        "id": "213672d5b2bb913f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9113e0bbe6007d7f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c2749f7f45618376",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f5bf8fbcd3e782de",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "671068b6d9fc4fa8",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a654b16b0b5f7b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee7bc40e2570852e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8d4a9d961ab33c6b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6dc55829bf9cb82a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c88b3d5c42ee9e32",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "9113e0bbe6007d7f",
+  "lastOpenFiles": [
+    "2 BASE/git reset to id.md",
+    "2 BASE/code/nodejs/readwrite.js.md",
+    "Nodejs read write.md",
+    "3 ANKI CARDS/anki test.md",
+    "3 ANKI CARDS/words eng.md",
+    "00 Git Содержание.md",
+    "00 Javascript Содержимое.md",
+    "cherry pick vs rebase.md",
+    "CSS-in-JS.md",
+    "git pull force.md"
+  ]
+}

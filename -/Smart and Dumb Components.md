@@ -1,0 +1,6 @@
+#angular 
+In Angular, the concept of “smart” and “dumb” components is a pattern for structuring the application components.
+
+A “<font color="#f79646">smart</font>” component, also known as a<font color="#f79646"> container component,</font> is a component that has the responsibility of managing the state of the application and orchestrating the interactions between the components. A smart component is typically connected to a service or a store that manages the state of the application. It contains the business logic of the application and handles data fetching, transformation, and manipulation. Smart components are responsible for handling user interactions and propagating the state changes to the child components.
+
+On the other hand, a “<font color="#f79646">dumb</font>” component, also known as a <font color="#f79646">presentation component</font>, is a component that has <font color="#f79646">no</font> knowledge of the application state and only receives data and events from the parent components through inputs and outputs. <font color="#f79646">Dumb components are designed to be reusable and encapsulate the presentation logic of the application. </font>They have a simple API and are easy to test and maintain.

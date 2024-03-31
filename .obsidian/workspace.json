@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "ebf251cba7d4ef4c",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a447d9cbd2bee98",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2781f2d23b9a4691",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "1 FILES/3 canvas/React Map.canvas",
+                "viewState": {
+                  "x": -2072.2680985858406,
+                  "y": 123.34241984159195,
+                  "zoom": -0.938045537855365
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f34de4069a99117c",
+    "type": "split",
+    "children": [
+      {
+        "id": "213672d5b2bb913f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9113e0bbe6007d7f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c2749f7f45618376",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#tjavascript",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f5bf8fbcd3e782de",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "ec59160b4f96f5b7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 287.5
+  },
+  "right": {
+    "id": "671068b6d9fc4fa8",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a654b16b0b5f7b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6dc55829bf9cb82a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "alphabetical",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c88b3d5c42ee9e32",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "1 FILES/3 canvas/React Map.canvas"
+              }
+            }
+          },
+          {
+            "id": "78e9f0dd1c79b195",
+            "type": "leaf",
+            "state": {
+              "type": "side-panel-control-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "538722bbf8240919",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 587.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "canvas:Создать новый холст": false,
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "2781f2d23b9a4691",
+  "lastOpenFiles": [
+    "00 React MOC.md",
+    "1 FILES/3 canvas/React Map.canvas",
+    "1 FILES/3 canvas/Angular2 Map.canvas",
+    "1 FILES/3 canvas/Typescript Map.canvas",
+    "-/Typescript Object Types.md",
+    "1 FILES/3 canvas/RxJS.canvas",
+    "00 RxJs MOC.md",
+    "00 Typescript MOC.md",
+    "1 FILES/3 canvas/JS Map.canvas",
+    "00 Javascript MOC.md",
+    "00 Angular MOC.md",
+    "Trevel.canvas",
+    "-/Javascript Dev Tools.md",
+    "-/Javascript Memory Management.md",
+    "-/Javascript Modules.md",
+    "-/Javascritpt Iterators and Generators.md",
+    "-/Javascript Classes.md",
+    "-/Javascript Callbacks, Promises.md",
+    "-/Javascript This.md",
+    "-/Javascript Functions.md",
+    "-/Javascript Control Flow.md",
+    "-/Javascript Loops and Iterations.md",
+    "-/Javascript Equality Comparisons.md",
+    "-/Javascript Type Casting.md",
+    "-/Javascript Data types.md",
+    "-/Javascript Intro.md",
+    "-/Javscript Variables.md",
+    "-/types - NUB NOS.md",
+    "-/Typescript Type Compatibility.md",
+    "-/Typescript Interfaces.md",
+    "-/Typescript Introduction.md",
+    "1 FILES/3 canvas/NodeJS MAP.canvas",
+    "1 FILES/3 canvas/Git MAP.canvas",
+    "1 FILES/3 canvas/Patterns and Principles.canvas",
+    "1 FILES/3 canvas/DB MAP.canvas",
+    "1 FILES/0 images/Pasted image 20240313190653.png",
+    "1 FILES/0 images/Pasted image 20240313190608.png",
+    "1 FILES/0 images/Pasted image 20240313190539.png",
+    "1 FILES/0 images/Pasted image 20240313183245.png",
+    "1 FILES/0 images/Pasted image 20240313182841.png",
+    "1 FILES/0 images/Pasted image 20240313182747.png",
+    "1 FILES/0 images/Pasted image 20240313155440.png",
+    "1 FILES/0 images/Pasted image 20240313154220.png",
+    "1 FILES/0 images/Pasted image 20240313154128.png",
+    "1 FILES/0 images/Pasted image 20240311165203.png",
+    "1 FILES/1 pdfs/typescript.pdf",
+    "1 FILES/1 pdfs/react.pdf",
+    "1 FILES/1 pdfs/qa.pdf",
+    "1 FILES/1 pdfs/javascript.pdf",
+    "1 FILES/3 canvas",
+    "1 FILES/1 pdfs/frontend.pdf",
+    "1 FILES/1 pdfs/software-architect.pdf",
+    "1 FILES/1 pdfs/1 2018 frimen_adam_angular_dlya_professionalov.pdf",
+    "1 FILES/1 pdfs",
+    "RainDrop/Software engineering"
+  ]
+}

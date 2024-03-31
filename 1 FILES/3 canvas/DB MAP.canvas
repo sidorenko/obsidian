@@ -1,0 +1,34 @@
+{
+	"nodes":[
+		{"id":"14065bd8d34eb074","type":"text","text":"Ключ-значение => Redis\nДокументная => mongoDB\nГрафовая => Neo4j\nПоисковая => Elasticsearch\nМногостолбцовая => Casandra\nВременные ряды => InfluxDB\nМногомодельная => Couchbase","x":580,"y":-120,"width":341,"height":217},
+		{"id":"8241cef626fb9177","type":"text","text":"Реляционные","x":-600,"y":-559,"width":261,"height":58,"color":"2"},
+		{"id":"e7bf8a539aea0084","x":-102,"y":-418,"width":448,"height":218,"type":"text","text":"Эти базы данных не связаны с табличной структурой, как реляционные базы данных. Они используют различные модели данных, включая документо-ориентированные, графические, колоночные и ключ-значение. Примеры: **MongoDB, CouchDB, Cassandra, Redis, и Apache HBase**"},
+		{"id":"3ca82fcb961c0502","x":-102,"y":-175,"width":448,"height":164,"type":"text","text":"Используют модель программирования, основанную на объектах и их взаимодействиях. Они хранят данные в виде объектов. Примеры: **MongoDB и PostgreSQL** могут поддерживать эту модель."},
+		{"id":"fa2ebc657e536a92","x":-102,"y":4,"width":448,"height":129,"type":"text","text":"структура данных, которая выглядит как дерево, где каждый узел имеет запись с повторяющейся информацией. Пример: **IBM's Information Management System (IMS)**"},
+		{"id":"baca53f5a1ebc11e","x":-102,"y":162,"width":448,"height":129,"type":"text","text":"базы данных позволяет каждой записи иметь несколько родителей и несколько потомков. Примеры: **Integrated Data Store (IDS), IDMS (Integrated Database Management System)**"},
+		{"id":"995f9f10285243d4","x":-102,"y":-622,"width":448,"height":182,"type":"text","text":"Это самый распространенный тип баз данных. Они используют структуру, известную как таблицы, для хранения информации. В таблицах данные разделены на строки (записи) и столбцы (поля). Примеры: **MySQL, Oracle, PostgreSQL, SQLite, и MS SQL Server**"},
+		{"id":"37e930c98fc2bf22","x":-102,"y":320,"width":448,"height":121,"type":"text","text":"Сама база данных может быть как реляционной, так и NoSQL. Примеры: **Apache Cassandra, Google Spanner**"},
+		{"id":"dfe640ec37c16bc5","x":-98,"y":470,"width":444,"height":150,"type":"text","text":"базы данных, которые хранят все свои данные в основной памяти компьютера, а не на диске, для обеспечения максимальной скорости. Примеры: **Redis, MemSQL, SAP HANA**"},
+		{"id":"30d52605296c82f7","x":-98,"y":642,"width":444,"height":118,"type":"text","text":"тип баз данных, оптимизированный для аналитики, а не транзакций. Примеры: **Google BigQuery, Amazon Redshift, и Snowflake**."},
+		{"id":"1aaddd0972503220","x":-98,"y":779,"width":444,"height":141,"type":"text","text":"**(ML-based базы данных)**: Они используют искусственный интеллект и машинное обучение для предоставления прогнозов на основе анализа предыдущих данных."},
+		{"id":"f817b4543db0ea6f","type":"text","text":"Иерархические","x":-600,"y":39,"width":261,"height":58,"color":"2"},
+		{"id":"4eca6c9b6e068860","type":"text","text":"Сетевые","x":-600,"y":198,"width":261,"height":58,"color":"2"},
+		{"id":"629b6e6cb3d03aee","type":"text","text":"Самообучающиеся","x":-600,"y":821,"width":261,"height":58,"color":"2"},
+		{"id":"bccab87b95bf61fd","type":"text","text":"In-Memory","x":-600,"y":516,"width":261,"height":58,"color":"2"},
+		{"id":"7047ae8a11fe2e21","type":"text","text":"Распределенные","x":-600,"y":352,"width":261,"height":58,"color":"2"},
+		{"id":"1e6c70bd0e26b03b","type":"text","text":"Аналитические","x":-600,"y":672,"width":261,"height":58,"color":"2"},
+		{"id":"e2ee2e5318820aff","type":"text","text":"Объектно-ориентированные","x":-600,"y":-123,"width":300,"height":60,"color":"2"},
+		{"id":"996f826e20184b10","type":"text","text":"NoSQL","x":-600,"y":-338,"width":261,"height":58,"color":"2"}
+	],
+	"edges":[
+		{"id":"6e16dc68fcf038e1","fromNode":"8241cef626fb9177","fromSide":"right","toNode":"995f9f10285243d4","toSide":"left"},
+		{"id":"5a41a860b7c4e994","fromNode":"996f826e20184b10","fromSide":"right","toNode":"e7bf8a539aea0084","toSide":"left"},
+		{"id":"7c52298a5f201507","fromNode":"e2ee2e5318820aff","fromSide":"right","toNode":"3ca82fcb961c0502","toSide":"left"},
+		{"id":"9c134e0f400d6859","fromNode":"f817b4543db0ea6f","fromSide":"right","toNode":"fa2ebc657e536a92","toSide":"left"},
+		{"id":"04309a2eafa47b6b","fromNode":"4eca6c9b6e068860","fromSide":"right","toNode":"baca53f5a1ebc11e","toSide":"left"},
+		{"id":"c7bd662a06eace51","fromNode":"7047ae8a11fe2e21","fromSide":"right","toNode":"37e930c98fc2bf22","toSide":"left"},
+		{"id":"7724aa4cbc7b84f3","fromNode":"bccab87b95bf61fd","fromSide":"right","toNode":"dfe640ec37c16bc5","toSide":"left"},
+		{"id":"b55348b00c4028f1","fromNode":"1e6c70bd0e26b03b","fromSide":"right","toNode":"30d52605296c82f7","toSide":"left"},
+		{"id":"36ad3b5090f5b29b","fromNode":"629b6e6cb3d03aee","fromSide":"right","toNode":"1aaddd0972503220","toSide":"left"}
+	]
+}

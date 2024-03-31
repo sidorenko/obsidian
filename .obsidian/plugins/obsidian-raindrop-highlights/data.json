@@ -1,0 +1,69 @@
+{
+  "version": "0.0.18",
+  "username": "Виталий Сидоренко",
+  "isConnected": true,
+  "ribbonIcon": true,
+  "appendMode": true,
+  "collectionsFolders": true,
+  "onlyBookmarksWithHl": true,
+  "highlightsFolder": "RainDrop",
+  "collectionGroups": false,
+  "syncCollections": {
+    "32190775": {
+      "id": 32190775,
+      "title": "Angular",
+      "sync": true,
+      "lastSyncDate": "2023-07-09T22:33:28.080Z"
+    },
+    "32190839": {
+      "id": 32190839,
+      "title": "Javascript",
+      "sync": true,
+      "lastSyncDate": "2023-07-09T22:33:28.164Z"
+    },
+    "32191030": {
+      "id": 32191030,
+      "title": "React",
+      "sync": true,
+      "lastSyncDate": "2023-07-09T22:33:28.243Z"
+    },
+    "32191153": {
+      "id": 32191153,
+      "title": "Patterns, concepts",
+      "sync": true,
+      "lastSyncDate": "2023-07-09T22:33:28.313Z"
+    },
+    "32275801": {
+      "id": 32275801,
+      "title": "RxJS",
+      "sync": true,
+      "lastSyncDate": "2023-07-09T22:33:28.383Z"
+    },
+    "32276431": {
+      "id": 32276431,
+      "title": "Typescript",
+      "sync": true,
+      "lastSyncDate": "2023-07-09T22:33:28.462Z"
+    },
+    "35820644": {
+      "id": 35820644,
+      "title": "Software engineering",
+      "sync": true,
+      "lastSyncDate": "2023-07-09T22:33:28.699Z"
+    },
+    "-1": {
+      "id": -1,
+      "title": "Unsorted",
+      "sync": false
+    },
+    "-99": {
+      "id": -99,
+      "title": "Trash",
+      "sync": false
+    }
+  },
+  "template": "{% if is_new_article %}\n# Metadata7\n{% if link %}Source URL:: {{link}}{% endif %}\n{% if tags|length %}Topics:: {{ tags | join(\", #\") }}{% endif %}\n\n---\n> [!question]- QUESTION IN FLASHCARD\nflashcard-\n\n---\n# {{title}}\n\n{% if excerpt %}{{excerpt}}{% endif %}\n\n## Highlights\n{% endif -%}{% for highlight in highlights %}\n{% if highlight.color == \"red\" -%}\n    {%- set callout = \"danger\" -%}\n{%- elif highlight.color == \"blue\" -%}\n    {%- set callout = \"info\" -%}\n{%- elif highlight.color == \"green\" -%}\n    {%- set callout = \"check\" -%}\n{%- else -%}\n    {%- set callout = \"quote\" -%}\n{%- endif -%}\n> [!{{callout}}]+ Updated on {{highlight.lastUpdate}}\n>\n> {{highlight.text.split(\"\\n\") | join(\"\\n>\")}}\n{% if highlight.note -%}> > {{highlight.note}}{%- endif %}\n\n{%- endfor -%}\n",
+  "metadataTemplate": "",
+  "filenameTemplate": "{{title}}",
+  "autoSyncInterval": 0
+}

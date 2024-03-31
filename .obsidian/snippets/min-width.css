@@ -1,0 +1,7 @@
+.mod-root .mod-active {
+  min-width: min(88%, 40rem);
+}
+
+.mod-root .mod-active[data-type="excalidraw"] {
+  min-width: min(88%, 60rem);
+}

@@ -1,0 +1,5 @@
+- [Perceivable:](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)  (**воспринимаемым** <font color="#9bbb59">используя одно или несколько своих чувств</font>) Users must be able to perceive it in some way, using one or more of their senses.
+- alt , color contrast
+- [Operable](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable): (**работоспособным**) Users must be able to control UI elements (e.g. buttons must be clickable in some way — mouse, keyboard, voice command, etc.).
+- [Understandable](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable): (**понятным**) The content must be understandable to its users.
+- [Robust](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust): (**прочным**) The content must be developed using well-adopted web standards that will work across different browsers, now and in the future.
