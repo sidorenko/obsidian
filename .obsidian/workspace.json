@@ -4,20 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "b61cdf3aa99a0d09",
+        "id": "3e8c18fdc656a590",
         "type": "tabs",
         "children": [
           {
-            "id": "aebd1c09c0366195",
+            "id": "10b2d5d4d3dce06b",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "1 FILES/3 canvas/React Map.canvas",
+                "viewState": {
+                  "x": -1751.7023821536238,
+                  "y": -497.0652788634119,
+                  "zoom": -0.6889032335670956
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "React Map"
+            }
+          },
+          {
+            "id": "254682b4e218e456",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "-/git settings.md",
+                "file": "00 Typescript MOC.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "00 Typescript MOC"
             }
           }
         ]
@@ -40,7 +59,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
             }
           },
           {
@@ -49,13 +70,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#tjavascript",
+                "query": "angular",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabeticalReverse"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
             }
           },
           {
@@ -63,7 +86,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Плагин больше не активен"
             }
           },
           {
@@ -71,14 +96,16 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 287.5
+    "width": 263.5
   },
   "right": {
     "id": "671068b6d9fc4fa8",
@@ -96,7 +123,9 @@
               "state": {
                 "sortOrder": "alphabetical",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
             }
           },
           {
@@ -105,8 +134,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "-/git settings.md"
-              }
+                "file": "1 FILES/3 canvas/React Map.canvas"
+              },
+              "icon": "lucide-list",
+              "title": "Структура React Map"
             }
           },
           {
@@ -114,7 +145,9 @@
             "type": "leaf",
             "state": {
               "type": "side-panel-control-view",
-              "state": {}
+              "state": {},
+              "icon": "viewIcon",
+              "title": "Markdown-Autocomplete"
             }
           },
           {
@@ -126,7 +159,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "Все свойства"
             }
           }
         ],
@@ -139,6 +174,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "excel:Create Excel File": false,
       "canvas:Создать новый холст": false,
       "switcher:Меню быстрого перехода": false,
       "graph:Граф": false,
@@ -148,44 +184,48 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "aebd1c09c0366195",
+  "active": "10b2d5d4d3dce06b",
   "lastOpenFiles": [
-    "00 Git MOC.md",
-    "-/git init.md",
-    "-/git hooks.md",
-    "-/git aliases.md",
-    "-/git generate ssh.md",
+    "00 Typescript MOC.md",
     "1 FILES/3 canvas/React Map.canvas",
     "00 React MOC.md",
+    "WORK/GAZER/Без названия.canvas",
+    "The Socrates Platform.canvas",
+    "Interview",
+    "-/SELF Presentation.md",
+    "-/Interview Questions Table.md",
+    "-/Interview Questions Angular ONLY.md",
     "1 FILES/3 canvas/Angular2 Map.canvas",
-    "1 FILES/3 canvas/Typescript Map.canvas",
-    "-/Typescript Object Types.md",
-    "1 FILES/3 canvas/RxJS.canvas",
-    "00 RxJs MOC.md",
-    "00 Typescript MOC.md",
+    "-/angular tasks.md",
+    "WORK/GAZER",
+    "WORK",
     "1 FILES/3 canvas/JS Map.canvas",
+    "-/Memoisation.md",
+    "-/First-class object.md",
     "00 Javascript MOC.md",
-    "00 Angular MOC.md",
+    "1 FILES/3 canvas/RxJS.canvas",
+    "-/MAPs.md",
+    "-/React Class-based.md",
+    "-/Testing RxJS.md",
+    "-/Operators examples.md",
+    "-/Cold & Hot observables.md",
+    "-/RxJs Lifecycle.md",
+    "-/RxJS vs Promises.md",
+    "-/Angular 16 Signals.md",
+    "-/Marble Diagrams.md",
+    "00 RxJs MOC.md",
+    "-/Subjects vs observables.md",
+    "-/map weakMap set weakSet.md",
+    "-/types - NUB NOS.md",
+    "-/Symbol JS.md",
+    "-/Interview Questions Javascript ONLY.md",
+    "Interview/Interview Calculating Table Javascript Excel.sheet.md",
+    "1 FILES/0 images/Pasted image 20241017131359.png",
+    "-/Interview Questions Typescript ONLY.md",
+    "1 FILES/3 canvas/Typescript Map.canvas",
     "Trevel.canvas",
-    "-/Javascript Dev Tools.md",
-    "-/Javascript Memory Management.md",
-    "-/Javascript Modules.md",
-    "-/Javascritpt Iterators and Generators.md",
-    "-/Javascript Classes.md",
-    "-/Javascript Callbacks, Promises.md",
-    "-/Javascript This.md",
-    "-/Javascript Functions.md",
-    "-/Javascript Control Flow.md",
-    "-/Javascript Loops and Iterations.md",
-    "-/Javascript Equality Comparisons.md",
-    "-/Javascript Type Casting.md",
-    "-/Javascript Data types.md",
-    "-/Javascript Intro.md",
-    "-/Javscript Variables.md",
     "1 FILES/3 canvas/NodeJS MAP.canvas",
     "1 FILES/3 canvas/Git MAP.canvas",
-    "1 FILES/3 canvas/Patterns and Principles.canvas",
-    "1 FILES/3 canvas/DB MAP.canvas",
     "1 FILES/0 images/Pasted image 20240313190653.png",
     "1 FILES/0 images/Pasted image 20240313190608.png",
     "1 FILES/0 images/Pasted image 20240313190539.png",
@@ -195,16 +235,12 @@
     "1 FILES/0 images/Pasted image 20240313155440.png",
     "1 FILES/0 images/Pasted image 20240313154220.png",
     "1 FILES/0 images/Pasted image 20240313154128.png",
-    "1 FILES/0 images/Pasted image 20240311165203.png",
     "1 FILES/1 pdfs/typescript.pdf",
     "1 FILES/1 pdfs/react.pdf",
     "1 FILES/1 pdfs/qa.pdf",
     "1 FILES/1 pdfs/javascript.pdf",
     "1 FILES/3 canvas",
     "1 FILES/1 pdfs/frontend.pdf",
-    "1 FILES/1 pdfs/software-architect.pdf",
-    "1 FILES/1 pdfs/1 2018 frimen_adam_angular_dlya_professionalov.pdf",
-    "1 FILES/1 pdfs",
-    "RainDrop/Software engineering"
+    "1 FILES/1 pdfs/software-architect.pdf"
   ]
 }

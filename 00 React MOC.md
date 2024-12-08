@@ -21,7 +21,7 @@ https://playcode.io/react - online compiler
 - [[React Code Reuse Patterns]]: React Redux (presentational vs container components, Provider, connect).
 - [[React Redux Async Flow]] (middleware, Redux Thunk).
 - [[React MobX]] (main principles, observable and computed values, actions, reactions).
-- [[React Context]] (when to use, Context.Provider, contextType, Context.Consumer, Context vs Redux).
+- [[React ccc]] (when to use, Context.Provider, contextType, Context.Consumer, Context vs Redux).
 - [[React Routing]] (react-router, JSX/object configuration, history)
 - [[React Animation]] (react-transition-group, manual animation, transition, translate).
 - [[React Performance]] (shouldComponentUpdate, keys, stateless components, PureComponent, React.memo).

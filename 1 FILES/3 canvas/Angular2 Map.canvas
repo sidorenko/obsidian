@@ -52,7 +52,7 @@
 		{"id":"3ad76a432a655de3","type":"text","text":"check method in unit tests","x":-965,"y":5290,"width":253,"height":60,"color":"1"},
 		{"type":"text","text":"Testing Angular Apps","id":"4cec47b63fdd1506","x":-892,"y":5003,"width":267,"height":55,"color":"2"},
 		{"id":"5fd4b8fa5a109936","type":"file","file":"-/Angular Performance.md","x":-1901,"y":3869,"width":936,"height":811,"color":"4"},
-		{"id":"241f62c1bbbb5b82","type":"file","file":"-/NgRx.md","x":-2051,"y":2180,"width":698,"height":888,"color":"4"},
+		{"id":"241f62c1bbbb5b82","type":"file","file":"-/NgRx.md","x":-2051,"y":2180,"width":711,"height":1080,"color":"4"},
 		{"id":"8e0e6e7d6ccac532","type":"text","text":"Configuration","x":-2912,"y":476,"width":167,"height":50},
 		{"id":"6483708b77339fb2","type":"text","text":"Router Outlets \nRouter Links \nRouter Events ","x":-3028,"y":756,"width":200,"height":124},
 		{"id":"a0ac783fcf8d1d82","type":"text","text":"Lazy Loading","x":-2745,"y":978,"width":185,"height":60},

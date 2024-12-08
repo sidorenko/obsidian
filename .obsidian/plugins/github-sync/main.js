@@ -4679,23 +4679,19 @@ var import_set_interval_async = __toESM(require_set_interval_async(), 1);
 var simpleGitOptions;
 var git;
 var DEFAULT_SETTINGS = {
-  ghUsername: "",
-  ghPersonalAccessToken: "",
-  ghRepoUrl: "",
+  remoteURL: "",
   gitLocation: "",
-  syncinterval: 0
+  syncinterval: 0,
+  isSyncOnLoad: false
 };
 var GHSyncPlugin = class extends import_obsidian.Plugin {
   async SyncNotes() {
     new import_obsidian.Notice("Syncing to GitHub remote");
-    const USER = this.settings.ghUsername;
-    const PAT = this.settings.ghPersonalAccessToken;
-    const REPO = this.settings.ghRepoUrl;
-    const remote = `https://${USER}:${PAT}@${REPO}`;
+    const remote = this.settings.remoteURL;
     simpleGitOptions = {
       //@ts-ignore
       baseDir: this.app.vault.adapter.getBasePath(),
-      binary: this.settings.gitLocation,
+      binary: this.settings.gitLocation + "git",
       maxConcurrentProcesses: 6,
       trimmed: false
     };
@@ -4703,7 +4699,7 @@ var GHSyncPlugin = class extends import_obsidian.Plugin {
     let os = require("os");
     let hostname = os.hostname();
     let statusResult = await git.status().catch((e) => {
-      new import_obsidian.Notice("Vault is not a Git repo or git binary cannot be found.\nProblem: " + e, 1e4);
+      new import_obsidian.Notice("Vault is not a Git repo or git binary cannot be found.", 1e4);
       return;
     });
     let clean = statusResult.isClean();
@@ -4733,7 +4729,7 @@ var GHSyncPlugin = class extends import_obsidian.Plugin {
     try {
       await git.fetch();
     } catch (e) {
-      new import_obsidian.Notice(e + "\nGitHub Sync: Invalid remote URL. Username, PAT, or Repo URL might be incorrect.", 1e4);
+      new import_obsidian.Notice(e + "\nGitHub Sync: Invalid remote URL.", 1e4);
       return;
     }
     new import_obsidian.Notice("GitHub Sync: Successfully set remote origin url");
@@ -4761,7 +4757,7 @@ var GHSyncPlugin = class extends import_obsidian.Plugin {
     }
     if (!clean) {
       try {
-        git.push("origin", "main");
+        git.push("origin", "main", ["-u"]);
         new import_obsidian.Notice("GitHub Sync: Pushed on " + msg);
       } catch (e) {
         new import_obsidian.Notice(e, 1e4);
@@ -4774,6 +4770,13 @@ var GHSyncPlugin = class extends import_obsidian.Plugin {
       this.SyncNotes();
     });
     ribbonIconEl.addClass("gh-sync-ribbon");
+    this.addCommand({
+      id: "github-sync-command",
+      name: "Sync with Remote",
+      callback: () => {
+        this.SyncNotes();
+      }
+    });
     this.addSettingTab(new GHSyncSettingTab(this.app, this));
     if (!isNaN(this.settings.syncinterval)) {
       let interval = this.settings.syncinterval;
@@ -4788,24 +4791,24 @@ var GHSyncPlugin = class extends import_obsidian.Plugin {
       }
     }
     try {
-      const USER = this.settings.ghUsername;
-      const PAT = this.settings.ghPersonalAccessToken;
-      const REPO = this.settings.ghRepoUrl;
-      const remote = `https://${USER}:${PAT}@${REPO}`;
       simpleGitOptions = {
         //@ts-ignore
         baseDir: this.app.vault.adapter.getBasePath(),
-        binary: this.settings.gitLocation,
+        binary: this.settings.gitLocation + "git",
         maxConcurrentProcesses: 6,
         trimmed: false
       };
       git = simpleGit(simpleGitOptions);
-      let branchresult = await git.branch();
-      let currentbranchname = branchresult.current;
-      await git.branch({ "--set-upstream-to": "origin/" + currentbranchname });
+      await git.branch({ "--set-upstream-to": "origin/main" });
       let statusUponOpening = await git.fetch().status();
       if (statusUponOpening.behind > 0) {
-        new import_obsidian.Notice("GitHub Sync: " + statusUponOpening.behind + " commits behind remote branch.\nClick the GitHub ribbon icon to sync.");
+        if (this.settings.isSyncOnLoad == true) {
+          this.SyncNotes();
+        } else {
+          new import_obsidian.Notice("GitHub Sync: " + statusUponOpening.behind + " commits behind remote.\nClick the GitHub ribbon icon to sync.");
+        }
+      } else {
+        new import_obsidian.Notice("GitHub Sync: up to date with remote.");
       }
     } catch (e) {
     }
@@ -4827,23 +4830,27 @@ var GHSyncSettingTab = class extends import_obsidian.PluginSettingTab {
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    new import_obsidian.Setting(containerEl).setName("GitHub username").setDesc("").addText((text) => text.setPlaceholder("").setValue(this.plugin.settings.ghUsername).onChange(async (value) => {
-      this.plugin.settings.ghUsername = value;
+    const howto = containerEl.createEl("div", { cls: "howto" });
+    howto.createEl("div", { text: "How to use this plugin", cls: "howto_title" });
+    howto.createEl("small", { text: "Grab your GitHub repository's HTTPS or SSH url and paste it into the settings here. If you're not authenticated, the first sync with this plugin should prompt you to authenticate. If you've already setup SSH on your device with GitHub, you won't need to authenticate - just paste your repo's SSH url into the settings here.", cls: "howto_text" });
+    howto.createEl("br");
+    const linkEl = howto.createEl("p");
+    linkEl.createEl("span", { text: "See the " });
+    linkEl.createEl("a", { href: "https://github.com/kevinmkchin/Obsidian-GitHub-Sync/blob/main/README.md", text: "README" });
+    linkEl.createEl("span", { text: " for more information and troubleshooting." });
+    new import_obsidian.Setting(containerEl).setName("Remote URL").setDesc("").addText((text) => text.setPlaceholder("").setValue(this.plugin.settings.remoteURL).onChange(async (value) => {
+      this.plugin.settings.remoteURL = value;
       await this.plugin.saveSettings();
-    }));
-    new import_obsidian.Setting(containerEl).setName("GitHub personal access token").setDesc("").addText((text) => text.setPlaceholder("ghp_XXXXXXXXXXXXXXXXXXXXXXXX").setValue(this.plugin.settings.ghPersonalAccessToken).onChange(async (value) => {
-      this.plugin.settings.ghPersonalAccessToken = value;
-      await this.plugin.saveSettings();
-    }));
-    new import_obsidian.Setting(containerEl).setName("GitHub repo URL for this vault").setDesc('In this format: "github.com/username/repo"').addText((text) => text.setPlaceholder("").setValue(this.plugin.settings.ghRepoUrl).onChange(async (value) => {
-      this.plugin.settings.ghRepoUrl = value;
-      await this.plugin.saveSettings();
-    }));
-    new import_obsidian.Setting(containerEl).setName("git binary location (optional)").setDesc("If git is not findable via your system PATH, then provide its directory here").addText((text) => text.setPlaceholder("").setValue(this.plugin.settings.gitLocation).onChange(async (value) => {
+    }).inputEl.addClass("my-plugin-setting-text"));
+    new import_obsidian.Setting(containerEl).setName("[OPTIONAL] git binary location").setDesc("If git is not findable via your system PATH, then provide its location here").addText((text) => text.setPlaceholder("").setValue(this.plugin.settings.gitLocation).onChange(async (value) => {
       this.plugin.settings.gitLocation = value;
       await this.plugin.saveSettings();
+    }).inputEl.addClass("my-plugin-setting-text2"));
+    new import_obsidian.Setting(containerEl).setName("[OPTIONAL] Auto sync on startup").setDesc("Automatically sync when you start obsidian if there are unsynced changes").addToggle((toggle) => toggle.setValue(this.plugin.settings.isSyncOnLoad).onChange(async (value) => {
+      this.plugin.settings.isSyncOnLoad = value;
+      await this.plugin.saveSettings();
     }));
-    new import_obsidian.Setting(containerEl).setName("Auto sync at interval (optional)").setDesc("Set a positive integer minute interval after which your vault is synced automatically. Auto sync is disabled if this field is left empty or not a positive integer. Restart Obsidan to take effect.").addText((text) => text.setValue(String(this.plugin.settings.syncinterval)).onChange(async (value) => {
+    new import_obsidian.Setting(containerEl).setName("[OPTIONAL] Auto sync at interval").setDesc("Set a positive integer minute interval after which your vault is synced automatically. Auto sync is disabled if this field is left empty or not a positive integer. Restart Obsidan to take effect.").addText((text) => text.setValue(String(this.plugin.settings.syncinterval)).onChange(async (value) => {
       this.plugin.settings.syncinterval = Number(value);
       await this.plugin.saveSettings();
     }));

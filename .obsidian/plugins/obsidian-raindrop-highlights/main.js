@@ -13747,13 +13747,13 @@ var import_obsidian4 = require("obsidian");
 var defaultMetadataTemplate_default = "{% if link %}link: {{link}}{% endif %}\n{% if tags|length %}tags: {%for tag in tags %}\n- {{tag}}{% endfor %}{% endif %}\n";
 
 // src/templates/templateInstructions.html
-var templateInstructions_default = 'Template (<a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>) for\nrendering every synced Raindrop.io highlights & annotations.\n\n<p>\n  <b>Available variables to use</b>\n</p>\n\nMetadata\n<ul>\n  <li><span class="u-pop">{{now}}</span> (Moment) - Present time</li>\n</ul>\n\nArticle Metadata\n<ul>\n  <li><span class="u-pop">{{is_new_article}}</span> (bool) - New file indicator</li>\n  <li><span class="u-pop">{{id}}</span> (number) - Article identifier</li>\n  <li><span class="u-pop">{{title}}</span> (string) - Title</li>\n  <li><span class="u-pop">{{excerpt}}</span> (string) - Article excerpt</li>\n  <li><span class="u-pop">{{note}}</span> (string) - Article note</li>\n  <li><span class="u-pop">{{link}}</span> (string) - Link to source</li>\n  <li><span class="u-pop">{{highlights}}</span> (Highlight[]) - List of your Highlights (Detail attributes refer to the following <span class="u-pop">Highlight</span> section)</li>\n  <li><span class="u-pop">{{collection}}</span> (Collection) - Collection data (Detail attributes refer to the following <span class="u-pop">Collection</span> section</li>\n  <li><span class="u-pop">{{creator}}</span> (Creator) - Creator data (Detail attributes refer to the following <span class="u-pop">Creator</span> section</li>\n  <li><span class="u-pop">{{tags}}</span> (string) - List of tag</li>\n  <li><span class="u-pop">{{cover}}</span> (string) - Article cover</li>\n  <li><span class="u-pop">{{created}}</span> (Moment) - Created on</li>\n  <li><span class="u-pop">{{type}}</span> (string) - Article type</li>\n  <li><span class="u-pop">{{important}}</span> (bool) - Favorite article</li>\n</ul>\n\nCreator\n<ul>\n  <li><span class="u-pop">{{name}}</span> (string) - Creator name</li>\n  <li><span class="u-pop">{{id}}</span> (number) - Creator id</li>\n</ul>\n\nCollection\n<ul>\n  <li><span class="u-pop">{{title}}</span> (string) - Collection title</li>\n</ul>\n\nHighlight\n<ul>\n  <li><span class="u-pop">{{id}}</span> (string) - Highlight identifier</li>\n  <li><span class="u-pop">{{text}}</span> (string) - Text</li>\n  <li><span class="u-pop">{{color}}</span> (string) - Highlight color</li>\n  <li><span class="u-pop">{{created}}</span> (Moment) - Created on</li>\n  <li><span class="u-pop">{{lastUpdate}}</span> (Moment) - Updated on</li>\n  <li><span class="u-pop">{{note}}</span> (string) - Annotation</li>\n</ul>\n\nFilter\n<ul>\n  <li><span class="u-pop">date(format: string)</span> Convert Moment object to string - example: <code>{{ now | date("YYYY/MM/DD") }}</code>. For more syntax, refer to <a href="https://momentjs.com/docs/#/displaying/format/">format reference</a>.</li>\n</ul>\n';
+var templateInstructions_default = 'Template (<a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>) for\nrendering every synced Raindrop.io highlights & annotations.\n\n<p>\n  <b>Available variables to use</b>\n</p>\n\nMetadata\n<ul>\n  <li><span class="u-pop">{{now}}</span> (Moment) - Present time</li>\n</ul>\n\nArticle Metadata\n<ul>\n  <li><span class="u-pop">{{is_new_article}}</span> (bool) - New file indicator</li>\n  <li><span class="u-pop">{{id}}</span> (number) - Article identifier</li>\n  <li><span class="u-pop">{{title}}</span> (string) - Title</li>\n  <li><span class="u-pop">{{excerpt}}</span> (string) - Article excerpt</li>\n  <li><span class="u-pop">{{note}}</span> (string) - Article note</li>\n  <li><span class="u-pop">{{link}}</span> (string) - Link to source</li>\n  <li><span class="u-pop">{{highlights}}</span> (Highlight[]) - List of your Highlights (Detail attributes refer to the following <span class="u-pop">Highlight</span> section)</li>\n  <li><span class="u-pop">{{collection}}</span> (Collection) - Collection data (Detail attributes refer to the following <span class="u-pop">Collection</span> section</li>\n  <li><span class="u-pop">{{creator}}</span> (Creator) - Creator data (Detail attributes refer to the following <span class="u-pop">Creator</span> section</li>\n  <li><span class="u-pop">{{tags}}</span> (string[]) - List of tag</li>\n  <li><span class="u-pop">{{cover}}</span> (string) - Article cover</li>\n  <li><span class="u-pop">{{created}}</span> (Moment) - Created on</li>\n  <li><span class="u-pop">{{type}}</span> (string) - Article type</li>\n  <li><span class="u-pop">{{important}}</span> (bool) - Favorite article</li>\n  <li><span class="u-pop">{{raindropUrl}}</span> (string) - Link to raindrop page</li>\n</ul>\n\nCreator\n<ul>\n  <li><span class="u-pop">{{name}}</span> (string) - Creator name</li>\n  <li><span class="u-pop">{{id}}</span> (number) - Creator id</li>\n</ul>\n\nCollection\n<ul>\n  <li><span class="u-pop">{{title}}</span> (string) - Collection title</li>\n</ul>\n\nHighlight\n<ul>\n  <li><span class="u-pop">{{id}}</span> (string) - Highlight identifier</li>\n  <li><span class="u-pop">{{text}}</span> (string) - Text</li>\n  <li><span class="u-pop">{{color}}</span> (string) - Highlight color</li>\n  <li><span class="u-pop">{{created}}</span> (Moment) - Created on</li>\n  <li><span class="u-pop">{{lastUpdate}}</span> (Moment) - Updated on</li>\n  <li><span class="u-pop">{{note}}</span> (string) - Annotation</li>\n</ul>\n\nFilter\n<ul>\n  <li><span class="u-pop">date(format: string)</span> Convert Moment object to string - example: <code>{{ now | date("YYYY/MM/DD") }}</code>. For more syntax, refer to <a href="https://momentjs.com/docs/#/displaying/format/">format reference</a>.</li>\n</ul>\n';
 
 // src/templates/metadataTemplateInstructions.html
-var metadataTemplateInstructions_default = 'Metadata template (<a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>) for\nrendering every synced Raindrop.io highlights & annotations.\n\n<p>\n	Some notes:\n</p>\n<ul>\n	<li>The rendered result is placed in the front matter of the generated post.</li>\n	<li>If the rendered result does not follow the YAML syntax, the plugin will reject the update.</li>\n	<li><code>raindrop_id</code> and <code>raindrop_highlights</code> properties are transparently added by the plugin.</li>\n	<li>Available variables to use are the same as the previous template.</li>\n</ul>\n';
+var metadataTemplateInstructions_default = 'Metadata template (<a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>) for\nrendering every synced Raindrop.io highlights & annotations.\n\n<p>\n	Some notes:\n</p>\n<ul>\n	<li>The rendered result is placed in the front matter of the generated post.</li>\n	<li>If the rendered result does not follow the YAML syntax, the plugin will reject the update.</li>\n	<li><code>raindrop_id</code> and <code>raindrop_highlights</code> properties are transparently added and updated by the plugin.</li>\n	<li>Available variables to use are the same as the previous template.</li>\n</ul>\n';
 
 // src/templates/filenameTemplateInstructions.html
-var filenameTemplateInstructions_default = 'Filename template (<a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>) for\ncreating synced Raindrop.io highlights & annotations.\n\n<p>\n	Some notes:\n</p>\n<ul>\n	<li>The rendered result is used as the filename for the bookmark.</li>\n	<li>This template is only used when creating the new file.</li>\n	<li>The rendered result is sanitized and truncated to 255 bytes.</li>\n	<li>The plugin will reject the invalid template.</li>\n	<li>If the file already exists in the vault, the auto generated suffix will be appended to the rendered result and used as the filename.</li>\n	<li>Available variables to use are the same as the previous template.</li>\n</ul>\n';
+var filenameTemplateInstructions_default = 'Filename template (<a href="https://mozilla.github.io/nunjucks/">Nunjucks</a>) for\ncreating synced Raindrop.io highlights & annotations.\n\n<p>\n	Some notes:\n</p>\n<ul>\n	<li>The rendered result is used as the filename for the bookmark.</li>\n	<li>The rendered result is sanitized and truncated to 255 bytes.</li>\n	<li>The plugin will reject the invalid template.</li>\n	<li>If the file already exists in the vault, the auto generated suffix will be appended to the rendered result and used as the filename.</li>\n	<li>Available variables to use are the same as the previous template.</li>\n</ul>\n';
 
 // src/templates/collectionGroupsInstructions.html
 var collectionGroupsInstructions_default = 'Add group name to the prefix of collection. See <a href="https://help.raindrop.io/collections/#groups">https://help.raindrop.io/collections/#groups</a> for more details about collection groups.\n';
@@ -14271,7 +14271,8 @@ var FAKE_RENDER_CONTEXT = {
     name: "fake_name",
     id: 1e4
   },
-  now: (0, import_moment.default)()
+  now: (0, import_moment.default)(),
+  raindropUrl: "https://example.com"
 };
 var Renderer = class {
   constructor(plugin) {
@@ -14357,7 +14358,8 @@ ${newMdContent}`;
       type: bookmark.type,
       important: bookmark.important,
       creator: bookmark.creator,
-      now: (0, import_moment.default)()
+      now: (0, import_moment.default)(),
+      raindropUrl: `https://app.raindrop.io/my/${bookmark.collectionId}/item/${bookmark.id}/edit`
     };
     const env = this.createEnv();
     const content = env.renderString(template, context);
@@ -14741,18 +14743,37 @@ var RaindropSync = class {
     this.plugin = plugin;
     this.renderer = new Renderer(plugin);
   }
-  async sync() {
+  async sync({ fullSync }) {
     const collectionGroup = this.plugin.settings.collectionGroups;
     const allCollections = await this.api.getCollections(collectionGroup);
     this.plugin.updateCollectionSettings(allCollections);
     for (const id in this.plugin.settings.syncCollections) {
       const collection = this.plugin.settings.syncCollections[id];
       if (collection.sync) {
-        await this.syncCollection(collection);
+        await this.syncCollection(collection, fullSync);
       }
     }
   }
-  async syncCollection(collection) {
+  async syncSingle({ file }) {
+    var _a;
+    let raindropId;
+    if (file) {
+      const fmc = (_a = this.app.metadataCache.getFileCache(file)) == null ? void 0 : _a.frontmatter;
+      if (!(fmc == null ? void 0 : fmc.raindrop_id)) {
+        new import_obsidian5.Notice("This is not a Raindrop bookmark file");
+        return;
+      } else {
+        raindropId = Number(fmc.raindrop_id);
+      }
+    } else {
+      new import_obsidian5.Notice("No active file");
+      return;
+    }
+    const bookmark = await this.api.getRaindrop(raindropId);
+    await this.updateFileContent(file, bookmark);
+    new import_obsidian5.Notice(`Sync ${bookmark.title} completed`);
+  }
+  getSyncFolder(collection) {
     if (this.plugin.settings.autoSyncSuccessNotice) {
       new import_obsidian5.Notice(`Sync Raindrop collection: ${collection.title}`);
     }
@@ -14761,11 +14782,19 @@ var RaindropSync = class {
     if (this.plugin.settings.collectionsFolders) {
       collectionFolder = `${highlightsFolder}/${collection["title"]}`;
     }
-    const lastSyncDate = this.plugin.settings.syncCollections[collection.id].lastSyncDate;
+    return collectionFolder;
+  }
+  async syncCollection(collection, fullSync) {
+    const syncFolder = this.getSyncFolder(collection);
+    const lastSyncDate = fullSync ? void 0 : this.plugin.settings.syncCollections[collection.id].lastSyncDate;
     try {
-      console.debug(`start sync collection: ${collection.title}, last sync at: ${lastSyncDate}`);
+      if (lastSyncDate === void 0) {
+        console.debug(`start sync collection: ${collection.title}, full sync`);
+      } else {
+        console.debug(`start sync collection: ${collection.title}, last sync at: ${lastSyncDate}`);
+      }
       for await (const bookmarks of this.api.getRaindropsAfter(collection.id, this.plugin.settings.autoSyncSuccessNotice, lastSyncDate)) {
-        await this.syncBookmarks(bookmarks, collectionFolder);
+        await this.syncBookmarks(bookmarks, syncFolder);
       }
       await this.syncCollectionComplete(collection);
     } catch (e) {
@@ -15543,15 +15572,17 @@ var RaindropAPI = class {
     const nestedCollectionMap = {};
     const nestedCollections = await nestedCollectionPromise;
     nestedCollections.items.forEach((collection) => {
+      var _a, _b;
       const id = collection["_id"];
       nestedCollectionMap[id] = {
         title: collection["title"],
-        parentId: collection["parent"]["$id"]
+        parentId: (_b = (_a = collection["parent"]) == null ? void 0 : _a["$id"]) != null ? _b : 0
       };
     });
     nestedCollections.items.forEach((collection) => {
+      var _a, _b;
       const id = collection["_id"];
-      let parentId = collection["parent"]["$id"];
+      let parentId = (_b = (_a = collection["parent"]) == null ? void 0 : _a["$id"]) != null ? _b : 0;
       let title = collection["title"];
       while (parentId && parentId in nestedCollectionMap) {
         title = `${nestedCollectionMap[parentId].title}/${title}`;
@@ -15576,7 +15607,7 @@ var RaindropAPI = class {
     const res = await this.get(`${BASEURL}/raindrops/${collectionId}`, {
       page: 0,
       perpage: pageSize,
-      sort: "-lastUpdate"
+      sort: "-created"
     });
     const raindropsCnt = res.count;
     let bookmarks = this.parseRaindrops(res.items);
@@ -15587,7 +15618,7 @@ var RaindropAPI = class {
       const res2 = await this.get(`${BASEURL}/raindrops/${collectionId}`, {
         page: page2,
         perpage: pageSize,
-        sort: "-lastUpdate"
+        sort: "-created"
       });
       return this.parseRaindrops(res2.items);
     };
@@ -15600,18 +15631,18 @@ var RaindropAPI = class {
         }
       }
     } else {
-      const filterLastUpdate = (bookmarks2) => {
+      const filterCreated = (bookmarks2) => {
         return bookmarks2.filter((bookmark) => {
-          return bookmark.lastUpdate.getTime() >= lastSync.getTime();
+          return bookmark.created.getTime() >= lastSync.getTime();
         });
       };
-      const filteredBookmark = filterLastUpdate(bookmarks);
+      const filteredBookmark = filterCreated(bookmarks);
       if (filteredBookmark.length > 0) {
         yield filteredBookmark;
-        while (bookmarks[bookmarks.length - 1].lastUpdate.getTime() >= lastSync.getTime() && remainPages--) {
+        while (bookmarks[bookmarks.length - 1].created.getTime() >= lastSync.getTime() && remainPages--) {
           notice == null ? void 0 : notice.setMessage(`Sync Raindrop pages: ${page + 1}/${totalPages}`);
           let bookmarks2 = await getPage(page++);
-          yield filterLastUpdate(bookmarks2);
+          yield filterCreated(bookmarks2);
         }
       }
     }
@@ -15704,7 +15735,7 @@ var RaindropAPI = class {
 var defaultTemplate_default = '{% if is_new_article %}\n# Metadata\n{% if link %}Source URL:: {{link}}{% endif %}\n{% if tags|length %}Topics:: #{{ tags | join(", #") }}{% endif %}\n\n---\n# {{title}}\n\n{% if excerpt %}{{excerpt}}{% endif %}\n\n## Highlights\n{% endif -%}{% for highlight in highlights %}\n{% if highlight.color == "red" -%}\n    {%- set callout = "danger" -%}\n{%- elif highlight.color == "blue" -%}\n    {%- set callout = "info" -%}\n{%- elif highlight.color == "green" -%}\n    {%- set callout = "check" -%}\n{%- else -%}\n    {%- set callout = "quote" -%}\n{%- endif -%}\n> [!{{callout}}]+ Updated on {{highlight.lastUpdate}}\n>\n> {{highlight.text.split("\\n") | join("\\n>")}}\n{% if highlight.note -%}> > {{highlight.note + "\\n"}}{%- endif %}\n\n{%- endfor -%}\n';
 
 // src/constants.ts
-var VERSION = "0.0.20";
+var VERSION = "0.0.22";
 var DEFAULT_SETTINGS = {
   version: VERSION,
   username: void 0,
@@ -15733,6 +15764,13 @@ var BreadkingChangeModal = class extends import_obsidian7.Modal {
     this.waitForClose = new Promise((resolve) => this.resolvePromise = resolve);
     this.titleEl.innerText = "Raindrop Highlight - Breaking Changes";
     let breakingChanges = "";
+    if (import_semver.default.lt(currentVersion, "0.0.21")) {
+      breakingChanges += `<p>v0.0.21</p>
+<ul>
+<li>Sync collections from last update time is now changed to sync from created time. You should now use either \`Raindrop Highlights: Sync all bookmarks (full sync)\` or \`Raindrop Highlights: Sync this bookmark\` command to update existing files. See issue <a href="https://github.com/kaiiiz/obsidian-raindrop-highlights-plugin/issues/72">#72</a> for details.</li>
+</ul>
+`;
+    }
     if (import_semver.default.lt(currentVersion, "0.0.19")) {
       breakingChanges += `<p>v0.0.19</p>
 <ul>
@@ -15767,19 +15805,34 @@ var RaindropPlugin = class extends import_obsidian8.Plugin {
     this.api = new RaindropAPI(this.app);
     this.raindropSync = new RaindropSync(this.app, this, this.api);
     if (this.settings.ribbonIcon) {
-      this.addRibbonIcon("cloud", "Sync your Raindrop highlights", () => {
+      this.addRibbonIcon("cloud", "Sync your Raindrop bookmarks", () => {
         if (!this.settings.isConnected) {
           new import_obsidian8.Notice("Please configure Raindrop API token in the plugin setting");
         } else {
-          this.raindropSync.sync();
+          this.raindropSync.sync({ fullSync: false });
         }
       });
     }
     this.addCommand({
-      id: "raindrop-sync",
-      name: "Sync highlights",
+      id: "raindrop-sync-new",
+      name: "Sync newly created bookmarks (sync from last sync time)",
       callback: async () => {
-        await this.raindropSync.sync();
+        await this.raindropSync.sync({ fullSync: false });
+      }
+    });
+    this.addCommand({
+      id: "raindrop-sync-all",
+      name: "Sync all bookmarks (full sync)",
+      callback: async () => {
+        await this.raindropSync.sync({ fullSync: true });
+      }
+    });
+    this.addCommand({
+      id: "raindrop-sync-this",
+      name: "Sync this bookmark",
+      callback: async () => {
+        const file = app.workspace.getActiveFile();
+        await this.raindropSync.syncSingle({ file });
       }
     });
     this.addCommand({
@@ -15805,7 +15858,7 @@ var RaindropPlugin = class extends import_obsidian8.Plugin {
             const bookmark = await this.api.getRaindrop(fmc.raindrop_id);
             window.open(`https://app.raindrop.io/my/${bookmark.collectionId}/item/${bookmark.id}/edit`);
           } else {
-            new import_obsidian8.Notice("This is not a Raindrop article file");
+            new import_obsidian8.Notice("This is not a Raindrop bookmark file");
           }
         } else {
           new import_obsidian8.Notice("No active file");
@@ -15882,7 +15935,7 @@ var RaindropPlugin = class extends import_obsidian8.Plugin {
     const minutesToSync = minutes != null ? minutes : this.settings.autoSyncInterval;
     if (minutesToSync > 0) {
       this.timeoutIDAutoSync = window.setTimeout(() => {
-        this.raindropSync.sync();
+        this.raindropSync.sync({ fullSync: false });
         this.startAutoSync();
       }, minutesToSync * 6e4);
     }

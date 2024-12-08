@@ -9,7 +9,7 @@
 
 ![[JS Map.canvas|canvas mindmap JS]]
 
-> [!quote]- Interview Questions by levels:
+> [!quote]- EPAM Interview Questions by levels:
 
 ### Novice (Junior)
 **Arrays**
@@ -298,6 +298,9 @@
 JavaScript Deep Dive
 
 - Clear understanding of the architectural principles and can choose right framework for particular project to be able to write code that can be easily maintained
+
+
+
 
 
 
